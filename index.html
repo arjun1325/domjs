@@ -6,21 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    //Write a JavaScript program to remove items(clicking on a button) 
+    //Write a JavaScript program to change the  color given text in p tag
     <select id="colorSelect">
         <option value="red">red</option>
         <option value="green">green</option>
         <option value="white">white</option>
         <option value="black">black</option>
       </select>
-      <button onclick="removeElement()">Remove item</button>
-  
+      <button id="btn">change Color</button>
+      <p>”sample test….”</p>
+    
       <script>
+        document.getElementById('btn').addEventListener('click',operation)
+    
         
-        function removeElement() {
-          const select = document.getElementById('colorSelect')
-          const target = select.lastElementChild;
-          select.removeChild(target);
+        function operation() {
+          const selectedColor = document.getElementById('colorSelect').value;
+          document.querySelector('p').style.color = selectedColor
         }
       </script>
 </body>
