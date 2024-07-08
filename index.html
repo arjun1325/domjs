@@ -6,13 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        //1. Write a function calculateFactorial (n) that takes a non-negative integer n and returns the factorial of n.(factorial of 5= 5*4*3*2*1=120)
-          function calcuFactorial(n) {
-      return result = n * 4 * 3 * 2 * 1;
+ <script>
+    //Write a function sumEvenNumbers(start, end) that takes two integers start and end, and returns the sum of all even numbers in the inclusive range from start to end.
+      function sumEvenNumbers(start, end) {
+      let sum = 0;
+      
+      for (let i = start; i <= end; i++) {
+       if (i % 2 === 0) {
+        sum += i;
+       }
+      }
+      return sum;
     }
 
-    console.log(calcuFactorial(5)); 
+    console.log(sumEvenNumbers(1, 20)); 
     </script>
 </body>
 </html>
