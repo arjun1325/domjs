@@ -6,20 +6,21 @@
     <title>Document</title>
 </head>
 <body>
- <script>
-    //Write a function sumEvenNumbers(start, end) that takes two integers start and end, and returns the sum of all even numbers in the inclusive range from start to end.
-      function sumEvenNumbers(start, end) {
-      let sum = 0;
-      
-      for (let i = start; i <= end; i++) {
-       if (i % 2 === 0) {
-        sum += i;
-       }
-      }
-      return sum;
-    }
-
-    console.log(sumEvenNumbers(1, 20)); 
-    </script>
+    <select id="colorSelect">
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="white">white</option>
+        <option value="black">black</option>
+      </select>
+      <button onclick="removeElement()">Remove item</button>
+  
+      <script>
+        
+        function removeElement() {
+          const select = document.getElementById('colorSelect')
+          const target = select.lastElementChild;
+          select.removeChild(target);
+        }
+      </script>
 </body>
 </html>
